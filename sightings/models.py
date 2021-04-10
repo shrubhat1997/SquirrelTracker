@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 from django.urls import reverse
 
-class Squirrel(models.Model) :
+class Squirrels(models.Model) :
     X = models.FloatField(
         help_text=_('Longitude'),
     )
