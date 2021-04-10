@@ -42,13 +42,13 @@ class Squirrels(models.Model) :
         blank=True,
         null=True,
     )
-    Gray = 'Gray'
-    Cinnamon = 'Cinnamon'
-    Black = 'Black'
+    GRAY = 'Gray'
+    CINNAMON = 'Cinnamon'
+    BLACK = 'Black'
     Color_Choices = (
         (GRAY,'Gray'),
-        (Cinnamon,'Cinnamon'),
-        (Black,'Black'),
+        (CINNAMON,'Cinnamon'),
+        (BLACK,'Black'),
     )
     Primary_Fur_color = models.CharField(
         help_text=_('Primary Fur Color'),
@@ -88,10 +88,10 @@ class Squirrels(models.Model) :
     foraging = models.BooleanField(
         help_text=_('Is the squirrel foraging?'),default=False)
     other_activites = models.TextField(
-        max_length = 100
+        max_length = 100,
         help_text=_('Other activites'),
-        null=True
-        blank=True
+        null=True,
+        blank=True,
     )
     kuks = models.BooleanField(
         help_text=_('Is the squirrel kuking?'), default=False)
@@ -112,6 +112,3 @@ class Squirrels(models.Model) :
 
     def __str__(self) :
         return self.Unique_Squirrel_ID
-
-    def get_urls(self) :
-        return ''
