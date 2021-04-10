@@ -1,11 +1,7 @@
-- How to collaborate on repo
-- How to do import export command lines
-- Do Readme
-
-
 # Squirrel Tracker for the eccentric Joffrey Hosencratz
 
-![Squirrel] (squirrel_girl.png)
+![Squirrel](squirrel_girl.png)
+
 
 ## High-level description
 
