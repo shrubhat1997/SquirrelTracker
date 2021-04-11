@@ -6,6 +6,7 @@ import csv
 
 import datetime
 
+from distutils.util import strtobool
 
 class Command(BaseCommand):
 
@@ -52,33 +53,33 @@ class Command(BaseCommand):
 
                         Specific_Location=i['Specific Location'],
 
-                        Running=i['Running'].upper(),
+                        Running=strtobool(i['Running']),
 
-                        Chasing=i['Chasing'].upper(),
+                        Chasing=strtobool(i['Chasing']),
 
-                        Climbing=i['Climbing'].upper(),
+                        Climbing=strtobool(i['Climbing']),
 
-                        Eating=i['Eating'].upper(),
+                        Eating=strtobool(i['Eating']),
 
-                        Foraging=i['Foraging'].upper(),
+                        Foraging=strtobool(i['Foraging']),
 
                         Other_Activities=i['Other Activities'],
 
-                        Kuks=i['Kuks'].upper(),
+                        Kuks=strtobool(i['Kuks']),
 
-                        Quaas=i['Quaas'].upper(),
+                        Quaas=strtobool(i['Quaas']),
 
-                        Moans=i['Moans'].upper(),
+                        Moans=strtobool(i['Moans']),
 
-                        Tail_Flags=i['Tail Flags'].upper(),
+                        Tail_Flags=strtobool(i['Tail flags']),
 
-                        Tail_Twitches=i['Tail Twitches'].upper(),
+                        Tail_Twitches=strtobool(i['Tail twitches']),
 
-                        Approaches=i['Approaches'].upper(),
+                        Approaches=strtobool(i['Approaches']),
 
-                        Indifferent=i['Indifferent'].upper(),
+                        Indifferent=strtobool(i['Indifferent']),
 
-                        Runs_From=i['Runs From'].upper(),
+                        Runs_From=strtobool(i['Runs from']),
 
                     )
 
