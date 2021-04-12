@@ -50,7 +50,7 @@ class Squirrels(models.Model) :
         (CINNAMON,'Cinnamon'),
         (BLACK,'Black'),
     )
-    Primary_Fur_color = models.CharField(
+    Primary_Fur_Color = models.CharField(
         help_text=_('Primary Fur Color'),
         max_length=50,
         choices=Color_Choices,
@@ -77,37 +77,37 @@ class Squirrels(models.Model) :
         blank=True,
         null=True,
     )
-    running = models.BooleanField(
+    Running = models.BooleanField(
         help_text=_('Is the squirrel running?'),default=False)
-    chasing = models.BooleanField(
+    Chasing = models.BooleanField(
         help_text=_('Is the squirrel chasing?'),default=False)
-    climbing = models.BooleanField(
+    Climbing = models.BooleanField(
         help_text=_('Is the squirrel climbing?'),default=False)
-    eating = models.BooleanField(
+    Eating = models.BooleanField(
         help_text=_('Is the squirrel eating?'),default=False)
-    foraging = models.BooleanField(
+    Foraging = models.BooleanField(
         help_text=_('Is the squirrel foraging?'),default=False)
-    other_activites = models.TextField(
+    Other_Activities = models.TextField(
         max_length = 100,
         help_text=_('Other activites'),
         null=True,
         blank=True,
     )
-    kuks = models.BooleanField(
+    Kuks = models.BooleanField(
         help_text=_('Is the squirrel kuking?'), default=False)
-    quaas = models.BooleanField(
+    Quaas = models.BooleanField(
         help_text=_('Is the squirrel quaaing?'), default=False)
-    moans = models.BooleanField(
+    Moans = models.BooleanField(
         help_text=_('Is the squirrel moaning?'), default=False)
-    tail_flags = models.BooleanField(
+    Tail_Flags = models.BooleanField(
         help_text=_('Does the squirrel have a tail flag?'), default=False)
-    tail_twitches = models.BooleanField(
+    Tail_Twitches = models.BooleanField(
         help_text=_('Is the squirrel\'s tail twitching?'), default=False)
-    approaches = models.BooleanField(
+    Approaches = models.BooleanField(
         help_text=_('Did the squirrel approach you?'), default=False)
-    indifferent = models.BooleanField(
+    Indifferent = models.BooleanField(
         help_text=_('Was the squirrel indifferent to you?'), default=False)
-    runs_from = models.BooleanField(
+    Runs_From = models.BooleanField(
         help_text=_('Did the squirrel run from you?'), default=False)
 
     def __str__(self) :
