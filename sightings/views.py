@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Squirrels
 from django.shortcuts import redirect, get_object_or_404
 
-from .models import Squirrel
+from .models import Squirrels
 from .forms import SquirrelSightingForm
 
 def index(request) :
@@ -21,7 +21,7 @@ def view_map(request) :
     return render(request,'sightings/maps.html',context)
 
 def update(request, Unique_Squirrel_ID):
-    object = get_object_or_404(Squirrel, Unique_squirrel_id=Unique_Squirrel_ID)
+    object = get_object_or_404(Squirrels, Unique_squirrel_id=Unique_Squirrel_ID)
     if request.method=='POST':
         form = SquirrelSightingForm(request.POST, instance=object)
         if form.is_valid():
