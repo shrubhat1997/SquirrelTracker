@@ -1,10 +1,10 @@
 from django.forms import ModelForm
 
-from .models import Squirrel
+from .models import Squirrels
 
 class SquirrelSightingForm(ModelForm):
     class Meta:
-        model = Squirrel
+        model = Squirrels
         fields = '__all__'
 
         
