@@ -21,7 +21,7 @@ def view_map(request) :
     return render(request,'sightings/maps.html',context)
 
 def update(request, Unique_Squirrel_ID):
-    object = get_object_or_404(Squirrels, Unique_squirrel_ID=Unique_Squirrel_ID)
+    object = get_object_or_404(Squirrels, Unique_Squirrel_ID=Unique_Squirrel_ID)
     if request.method=='POST':
         form = SquirrelSightingForm(request.POST, instance=object)
         if form.is_valid():
