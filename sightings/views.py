@@ -31,7 +31,7 @@ def update(request, Unique_Squirrel_ID):
             form = SquirrelSightingForm(instance=object)
             context = {
                     'form': form,
-                    }
+            }
     return render(request, 'sightings/squirrel_update.html', context)
 
 def add(request):
@@ -43,7 +43,7 @@ def add(request):
         else:
             form = SquirrelSightingForm()
         context = {
-                    'form': form;
-                    }
+                    'form': form,
+        }
         return render(request, 'sightings/squirrel_add.html', context)
 
