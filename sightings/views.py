@@ -20,17 +20,17 @@ def view_map(request) :
     }
     return render(request,'sightings/maps.html',context)
 
-def update(request, Unique_Squirrel_ID):
-    object = get_object_or_404(Squirrels, Unique_Squirrel_ID=Unique_Squirrel_ID)
+def update(request, squirrel_id):
+    object = get_object_or_404(Squirrels, Unique_Squirrel_ID=squirrel_id)
     if request.method=='POST':
         form = SquirrelSightingForm(request.POST, instance=object)
         if form.is_valid():
             form.save()
-            return redirect(f'/sightings/{Unique_Squirrel_ID}')
-        else:
-            form = SquirrelSightingForm(instance=object)
-            context = {
-                    'form': form,
+            return redirect(f'/sightings/{squirrel_id}')
+    else:
+        form = SquirrelSightingForm(instance=object)
+    context = {
+            'form': form,
             }
     return render(request, 'sightings/squirrel_update.html', context)
 
