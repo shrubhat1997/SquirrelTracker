@@ -8,9 +8,10 @@ def index(request) :
         'squirrels' : squirrels,
     }
     return render(request,'sightings/index.html',context)
-def view_map(request) :
+
+def map(request) :
     spot = Squirrels.objects.all()
     context = {
         'spot' : spot,
     }
-    return render(request,'sightings/maps.html',context)
+    return render(request,'sightings/map.html',context)
