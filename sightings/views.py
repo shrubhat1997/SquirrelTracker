@@ -37,7 +37,7 @@ def update(request, squirrel_id):
             form.save()
             return redirect(f'/sightings/{squirrel_id}')
     else:
-        form = SquirrelSightingForm(instance=object)
+        form = SquirrelSightingForm(instance=object1)
     context = {
             'form': form,
             'squirrel_id':squirrel_id,

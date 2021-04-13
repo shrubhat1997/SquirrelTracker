@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update the existing Squirrel Sighting</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    
+    <!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.0/examples/dashboard/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow ">
+        <p style="font-size:40" class="navbar-brand navbar-dark sticky-top bg-dark col-md-3 col-lg-2 me-0 p-2">Squirrel Tracker</p>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+    </li>
+  </ul>
+</header>
+<div class="container-fluid">
+<div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="/sightings/">
+              <span data-feather="home_page"></span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sightings/add/">
+              <span data-feather="new_squirrels"></span>
+              Add_Squirrel_Sightings
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sightings/stats/">
+              <span data-feather="stats"></span>
+              Statistics
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/map/">
+              <span data-feather="leaflet_maps"></span>
+              Map
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Updating the Sighting</h1>
+      </div>
+   </main>
+    <div class="starter-template">
+           <br>
+           <form class="form-group" action="." method="post">{% csrf_token %}
+            <table align="center">{{ form }}</table>
+            <br>
+            <center>
+            <button class="btn btn-primary" type="submit">Submit form</button></center>
+            <input type="submit" value="save">
+            </form>
+     </div>
+</body>
+</html>
+
