@@ -19,11 +19,7 @@ Chloe Walmsley and Shruti Bhat
 
 ## Dataset
 
-The data for the squirrel sightings has been imported from the [2018 Central Park Sq
-uirrel Census] (https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel
--Census-Squirrel-Data/vfnx-vebw). The dataset contains 3’023 rows and 31 columns, ea
-ch row representing a unique squirrel sighting. Each sighting includes detailed info
-rmation including the location coordinates of the sighting, the physical attributes 
+The data for the squirrel sightings has been imported from the [2018 Central Park Squirrel Census] (https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw). The dataset contains 3’023 rows and 31 columns, each row representing a unique squirrel sighting. Each sighting includes detailed information including the location coordinates of the sighting, the physical attributes 
 of the squirrel and the type of activity it was seen doing.
 
 ## Installation and dependencies
@@ -77,6 +73,7 @@ Squirrel sightings can be adapted to correct information.
 
 ```bash
 Located at : sightings/<squirrel-id>
+```
                                                                   
 ### Create new squirrel sightings
 
@@ -88,6 +85,6 @@ Located at : sightings/add/
 
 ## Deployment
 
-We have deployed are application which is available at this link:
+We have deployed our application, which is available at this link:
 TBD
 
