@@ -19,7 +19,7 @@ Chloe Walmsley and Shruti Bhat
 
 ## Dataset
 
-The data for the squirrel sightings has been imported from the [2018 Central Park Squirrel Census](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw). The dataset contains 3’023 rows and 31 columns, each row representing a unique squirrel sighting. Each sighting includes detailed information including the location coordinates of the sighting, the physical attributes 
+The data for the squirrel sightings has been imported from the 2018 Central Park Squirrel Census at: https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw . The dataset contains 3’023 rows and 31 columns, each row representing a unique squirrel sighting. Each sighting includes detailed information including the location coordinates of the sighting, the physical attributes 
 of the squirrel and the type of activity it was seen doing.
 
 ## Installation and dependencies
