@@ -1,4 +1,112 @@
-<html>
-	<body>Howdy partner
-	</body>
-</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statistics</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    
+    <!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.0/examples/dashboard/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow ">
+     <p style="font-size:40" class="navbar-brand navbar-dark sticky-top bg-dark col-md-3 col-lg-2 me-0 p-2">Squirrel Tracker</p>
+     <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+      </li>
+    </ul>
+   </header>
+<div class="container-fluid">
+<div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="/sightings/">
+              <span data-feather="home_page"></span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sightings/add/">
+              <span data-feather="new_squirrels"></span>
+              Add new sightings
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sightings/stats/">
+              <span data-feather="stats"></span>
+              Statistics
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/map/">
+              <span data-feather="leaflet_maps"></span>
+              Map
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Statistics</h1>
+      </div>
+      <div class="container marketing">
+        <div class="row">
+          <div class="col-lg-6">
+             <svg width="140" height="140" xmlns="http://www.w3.org/2000/svg"  role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><circle width="100%" height="100%" fill="#777"/><image href="https://www.iconninja.com/files/454/995/651/weather-sun-morning-sunrise-icon.png" width="140" height="140"></svg>
+	     <h2>{{num_of_am_shift}}</h2>
+             <p>Squirrel sightings in the mornings(AM) in 2018</p>
+           </div><!-- /.col-lg-4 -->
+          <div class="col-lg-6">
+		  <svg  width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><circle width="100%" height="100%" fill="#777"/><image href="https://cdn1.iconfinder.com/data/icons/weather-line-5/500/weather-09-512.png" width="140" height="140"></svg>
+
+		  <h2>{{num_of_pm_shift}}</h2>
+             <p>Squirrel sightings in the evenings(PM) in 2018</p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-6">
+             <svg  width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><circle width="100%" height="100%" fill="#777"/><image href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Noun_883674_cc_Symbolon_tree_icon.svg/960px-Noun_883674_cc_Symbolon_tree_icon.svg.png" width="140" height="140"></svg>
+
+	     <h2>{{num_aboveground}}</h2>
+             <p>Squirrel sightings above ground in Central Park</p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-6">
+		  <svg  width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><circle width="100%" height="100%" fill="#777"/><image href="https://brandeps.com/icon-download/G/Grass-icon-vector-01.svg" width="140" height="140"></svg>
+
+             <h2>{{num_groundplane}}</h2>
+             <p>Squirrel sightings on plane ground in Central park</p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-6">
+             <svg  width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><circle width="100%" height="100%" fill="#777"/><image href="https://cdn3.vectorstock.com/i/thumb-large/74/12/man-stand-person-icon-pictograph-vector-12927412.jpg" width="140" height="140"</svg>
+
+	     <h2>{{num_of_adults}}</h2>
+             <p>Squirrel sightings of adult squirrels</p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-6">
+             <svg  width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><circle width="100%" height="100%" fill="#777"/><image href="https://www.mcicon.com/wp-content/uploads/2021/01/People_Baby_1-copy-10.jpg" width="140" height="140"</svg>
+
+	     <h2>{{num_of_juveniles}}</h2>
+             <p>Squirrel sightings of juvenile squirrels</p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+     </div>
+</main>

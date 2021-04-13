@@ -4,6 +4,7 @@ from .models import Squirrels
 from django.shortcuts import redirect, get_object_or_404
 from .forms import SquirrelSightingForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Count
 
 def index(request) :
     squirrels = Squirrels.objects.all()
@@ -60,17 +61,14 @@ def add(request):
 def stats(request):
 
     num_of_sightings = Squirrels.objects.all().count()
-    num_of_squirrels = Squirrel.objects.filter(Unique_Squirrel_ID).count()
     num_of_am_shift = Squirrels.objects.filter(Shift='AM').count()
     num_of_pm_shift = Squirrels.objects.filter(Shift='PM').count()
     num_of_adults = Squirrels.objects.filter(Age='Adult').count()
     num_of_juveniles = Squirrels.objects.filter(Age='Juvenile').count()
+    num_groundplane = Squirrels.objects.filter(Location='Ground Plane').count()
+    num_aboveground = Squirrels.objects.filter(Location='Above Ground').count()
     
     context = {
-        'num_of_sightings': num_of_sightings,
-
-        'num_of_squirrels': num_of_squirrels,
-
         'num_of_am_shift': num_of_am_shift,
 
         'num_of_pm_shift': num_of_pm_shift,
@@ -78,6 +76,10 @@ def stats(request):
         'num_of_adults': num_of_adults,
 
         'num_of_juveniles': num_of_juveniles,
+
+        'num_groundplane':num_groundplane,
+
+        'num_aboveground':num_aboveground,
     }
 
     return render(request, 'sightings/stats.html', context)
