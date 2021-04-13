@@ -3,9 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.82.0">
     <title>Dashboard Template · Bootstrap v5.0</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
@@ -37,13 +34,13 @@
   </head>
   <body>
     
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow ">
-	<p style="font-size:40" class="navbar-brand navbar-dark sticky-top bg-dark col-md-3 col-lg-2 me-0 p-2">Squirrel Tracker</p>
-  <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">
-    </li>
-  </ul>
-</header>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow ">
+     <p style="font-size:40" class="navbar-brand navbar-dark sticky-top bg-dark col-md-3 col-lg-2 me-0 p-2">Squirrel Tracker</p>
+     <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+      </li>
+    </ul>
+   </header>
 
 <div class="container-fluid">
 <div class="row">
@@ -60,12 +57,6 @@
             <a class="nav-link" href="/sightings/add/">
               <span data-feather="new_squirrels"></span>
               Add_Squirrel_Sightings
-            </a>
-          </li>
-	  <li class="nav-item">
-            <a class="nav-link" href="/sightings/<Unique_Squirrel_ID>/">
-              <span data-feather="new_squirrels"></span>
-              Update_Squirrel_Sightings
             </a>
           </li>
           <li class="nav-item">
@@ -90,14 +81,23 @@
        </div>
        <img src="http://reveriechaser.com/wp-content/uploads/2015/07/squirrel-central-park-usa-new-york-nyc.jpg" width="900"></img>
 	<canvas class="my-4 w-100" id="myChart" width="900" height="5"></canvas>
-      <h2>Total Squirrels</h2>
+      <h1>Total Squirrels</h1>
+      <br>
+      <h2><a href="/sightings/add/">Click here to add a new squirrel sighting</a></h2>
+        <br>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
+	     <style>
+	      .tab1 {
+                  tab-size: 2;
+              }
+
+	    </style>
             <tr>
               <th>Unique Squirrel ID</th>
               <th>Date</th>
-              <th>Information of the Squirrel</th>
+              <th>Squirrel Description/Update</th>
             </tr>
           </thead>
           <tbody>
@@ -105,10 +105,48 @@
             	<tr>
               <td>{{sighting.Unique_Squirrel_ID}}</td>
 	      <td>{{sighting.Date}}</td>
+	      <td><a href="/sightings/{{sighting.Unique_Squirrel_ID}}/">Description/Update</a></td>
             </tr>
 	    	{% endfor %}
           </tbody>
         </table>
+        <nav aria-label="...">
+          <ul class="pagination">
+            {% if squirrels.has_previous %}
+            <li class="abled">
+              <a href="?page=1">
+		      <span aria-hidden="true" class="tab1">First</span></a>
+            </li>
+            <li class="disabled">	<li class="abled">
+			    <a href="?page={{ squirrels.previous_page_number }}" aria-label="Previous" class="tab1">Previous</a></li>
+            {%else%}
+            <li class="disabled">
+              <a href="?page=1">
+		      <span aria-hidden="true" class="tab1">First</span></a>
+            </li>
+            <li class="disabled">
+		    <a href="#" class="tab1">Previous</a></li><br>
+            {% endif %}
+            <li class='active'>
+              <span>{{ squirrels.number }} of {{ squirrels.paginator.num_pages }}</span></li>
+            {% if squirrels.has_next %}
+            <li class="abled">
+		    <a href="?page={{ squirrels.next_page_number }}" aria-label="Next" class="tab1">Next</a></li><br>
+            <li class="abled">
+              <a href="?page={{ squirrels.paginator.num_pages }}">
+		      <span aria-hidden="true" class="tab1">Last</span><br>
+              </a>
+            </li>
+            {%else%}
+            <li class="disabled">
+		    <a href="#" aria-label="Next" class="tab1">Next</a></li> <br>
+            <li class="disabled">
+              <a href="?page={{ squirrels.paginator.num_pages }}">
+		      <span aria-hidden="true" class="tab1">Last</span></a><br>
+            </li>
+            {% endif %}
+          </ul>
+    	</nav>  
       </div>
     </main>
   </div>
