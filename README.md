@@ -82,9 +82,3 @@ New squirrel sittings can be added to the application at any time.
 ```bash
 Located at : sightings/add/
 ```
-
-## Deployment
-
-We have deployed our application, which is available at this link:
-TBD
-
